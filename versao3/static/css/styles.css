@@ -1,0 +1,254 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url("../css/BAMCAF.jpg") no-repeat center center fixed;
+    background-size: cover;
+    /* position: relative;  */
+    position: initial;
+    
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Deixa a imagem mais escura */
+    z-index: -1;
+}
+
+/* Container principal */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Título */
+h1 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Estilos da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+th, td {
+    padding: 12px;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+/* Efeito zebrado */
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Botões estilosos */
+button {
+    padding: 12px 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Botão de exportação */
+#btnExportarCSV {
+    background: linear-gradient(135deg, #00C9FF, #92FE9D);
+    color: black;
+}
+
+#btnExportarCSV:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 255, 150, 0.5);
+}
+
+/* Botão de voltar */
+.btn-voltar {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+}
+
+.btn-voltar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 75, 43, 0.5);
+}
+
+/* Estilização do formulário */
+.form-group {
+    flex: 1 1 calc(50% - 10px); /* Para cada campo ocupar metade da largura */
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid #00C9FF; /* Destaque ao focar */
+}
+
+/* Efeito ao focar no campo */
+input:focus, select:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Ajuste para textarea ocupar toda a largura */
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .form-group {
+        flex: 1 1 100%; /* Cada campo ocupa 100% da largura */
+    }
+}
+
+/* Ajustes gerais */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+select {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+select option {
+    background-color: black; /* Define o fundo das opções */
+    color: white; /* Define a cor do texto das opções */
+}
+
+/* Labels */
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+/* Efeito ao focar */
+input:focus, select:focus, textarea:focus {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Ajustes para os botões de rádio */
+.movimentacao-group {
+    flex: 1 1 100%;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.radio-container label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Ajuste para textarea */
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* Botão de submit estilizado */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #00C9FF, #92FE9D);
+    color: black;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 255, 150, 0.5);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .form-group {
+        flex: 1 1 100%;
+    }
+
+    .radio-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}

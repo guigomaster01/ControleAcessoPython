@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Registros Salvos</h1>
+        <table id="tabelaRegistros">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Registro</th>
+                <th>Tipo</th>
+                <th>Movimentação</th>
+                <th>Prefixo Coletivo</th>
+                <th>Observações</th>
+                <th>Data e Hora</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registro in registros %}
+            <tr>
+                <td>{{ registro[0] }}</td>
+                <td>{{ registro[1] }}</td>
+                <td>{{ registro[2] }}</td>
+                <td>{{ registro[3] }}</td>
+                <td>{{ registro[4] }}</td>
+                <td>{{ registro[5] }}</td>
+                <td>{{ registro[6] }}</td>
+                <td>{{ registro[7] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <!-- <a href="{{ url_for('exportar_csv') }}">
+        <button class="btn-exportar">Exportar para CSV</button>
+    </a>
+
+    <br><br>
+    <a href="{{ url_for('index') }}">
+        <button class="btn-voltar">Voltar</button>
+    </a> -->
+    <button id="btnExportarCSV" onclick="exportarCSV()">Exportar para CSV</button><br><br>
+    <a href="{{ url_for('index') }}">
+        <button class="btn-voltar">Voltar</button>
+    </a>
+</div>
+<script>
+    function exportarCSV() {
+        window.location.href = "{{ url_for('exportar_csv') }}";
+    }
+</script>
+
+</body>
+</html>

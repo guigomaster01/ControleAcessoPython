@@ -1,0 +1,11 @@
+﻿id,nome,registro,tipo,movimentacao,prefixoColetivo,observacoes,data_hora
+1,Rodrigo,123456,Entrega de Encomendas,Entrada,,Teste,23/02/2025 10:56:36
+2,Rodrigo,123456,Avaria,Entrada,12345,teste,23/02/2025 10:56:52
+3,Teste,12345,Avaria,Saída,123,Teste,23/02/2025 11:00:27
+4,Outro teste,1234567,Avaria,Entrada,001,teste,23/02/2025 11:02:38
+5,Testador,123,Avaria,Entrada,001,teste,23/02/2025 11:06:33
+6,A,,Avaria,Entrada,,Teste,23/02/2025 11:15:18
+7,Teste,9,Avaria,Entrada,110,Avaria,23/02/2025 18:48:30
+8,Leandro,5015,Entrada,,,Teste,23/02/2025 18:53:04
+9,Teste,,Avaria,Saída,100,Avaria do lado direito,23/02/2025 19:03:20
+10,Rodrigo Teste,48263,Visitante,Entrada,Palio Branco,Entrou para falar sobre turismo,23/02/2025 19:05:01
